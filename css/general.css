@@ -1,0 +1,136 @@
+/* Se crean dos variables para los colores */
+
+:root {
+    --var-color-primary: #418dff;
+    --var-color-secondary: #f2f2d4;
+}
+
+body{
+    margin: 0;
+}
+
+/* BOTÓN FIJO
+ * El elemento se queda fijo en pantalla. Con bottom y right lo fijamos en
+ * la esquina inferior derecha. Con z-index hacemos que no le tape ningún
+ * otro elemento.
+ */
+
+.botonfijo {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: var(--var-color-primary);
+    padding: 15px;
+    border-radius: 100%;
+    cursor: pointer;
+    z-index: 999;
+}
+
+/*
+ * Se cambia el color del icono
+ */
+.botonfijo .fa-solid {
+    color: white;
+}
+
+/*
+ * HEADER
+ */
+
+ .cabecera {
+    position: relative;
+}
+
+/*
+ * La barra de navegación se mantiene fijo con sticky
+ */
+
+.barranav {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    background-color: var(--var-color-primary);
+    text-align: center;
+    padding: 15px;
+}
+
+.barranav a {
+    color: white;
+    padding: 0px 30px;
+    text-decoration: none;
+    font-size: 1.2rem;
+}
+
+.imagencabecera img {
+    width: 100%;
+    height: auto;
+}
+
+/*
+ * MAIN
+ */
+
+.contenedor {
+    position: relative;
+    margin: 20px;
+}
+
+/*
+ * CONTENEDOR LATERAL MENÚ NOTICIAS
+ * Al ser flotante hacemos que se posicione en la izquierda
+ * del contenedor padre
+ */
+
+aside {
+    position: sticky;
+    top: 20px;
+    float: left;
+    width: 250px;
+    text-align: center;
+    background-color: var(--var-color-secondary);
+}
+
+aside a {
+    display: block;
+    text-decoration: none;
+    color: var(--var-color-primary);
+    font-weight: bold;
+    padding-bottom: 20px;
+}
+
+/*
+ * CONTENEDOR DE NOTICIAS
+ * Lo desplazamos 300px respecto del lado izquierdo
+ */
+
+.contenido {
+    margin-left: 300px;
+}
+
+/*
+ * Al usar la pseudo-clase "first-of-type" cogemos el primer elemento de
+ * su tipo dentro del contenedor
+ */
+.noticia p:first-of-type {
+    font-size: 0.9rem;
+    font-style: italic;
+    color: #a3a3a3;
+}
+
+/*
+ * Al usar la pseudo-clase "last-of-type" cogemos el último elemento de
+ * su tipo dentro del contenedor
+ */
+.noticia p:last-of-type {
+    font-size: 1.2rem;
+    line-height: 2rem;
+}
+
+/*
+ * FOOTER
+ */
+
+.imagenpie img {
+    width: 100%;
+    height: auto;
+}
